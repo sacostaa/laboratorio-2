@@ -8,7 +8,9 @@ package vista;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -33,10 +35,10 @@ public class Escenapro1 implements Vista{
     private TextField tcorreo;
     private TextField ttell;
     private Button registrarse;
-    private Button cult;
-    private Button empre;
-    private Button art;
-    private Button cient;
+    private RadioButton cult;
+    private RadioButton empre;
+    private RadioButton art;
+    private RadioButton cient;
     private Label pregunta;
             
 
@@ -54,11 +56,17 @@ public class Escenapro1 implements Vista{
         this.ttell = new TextField();
         this.registrarse = new Button ("registrar");
         this.pregunta = new Label("de que orientacion es el proyecto?");
-        this.empre = new Button ("empresarial");
-        this.art = new Button ("artistica");
-        this.cient = new Button ("cientifica");
-        this.cult = new Button ("cultural");
+        ToggleGroup grupo = new ToggleGroup();
+        this.empre = new RadioButton ("empresarial");
+        this.art = new RadioButton ("artistica");
+        this.cient = new RadioButton ("cientifica");
+        this.cult = new RadioButton ("cultural");
         this.lmontomin = new Label("monto minimo");
+        this.cult.setToggleGroup(grupo);
+        this.art.setToggleGroup(grupo);
+        this.cient.setToggleGroup(grupo);
+        this.cult.setToggleGroup(grupo);
+        this.empre.setToggleGroup(grupo);
         this.tmontomin = new TextField();
         VBox layout = new VBox();
         HBox l1 = new HBox();
@@ -235,35 +243,35 @@ public class Escenapro1 implements Vista{
         this.registrarse = registrarse;
     }
 
-    public Button getCult() {
+    public RadioButton getCult() {
         return cult;
     }
 
-    public void setCult(Button cult) {
+    public void setCult(RadioButton cult) {
         this.cult = cult;
     }
 
-    public Button getEmpre() {
+    public RadioButton getEmpre() {
         return empre;
     }
 
-    public void setEmpre(Button empre) {
+    public void setEmpre(RadioButton empre) {
         this.empre = empre;
     }
 
-    public Button getArt() {
+    public RadioButton getArt() {
         return art;
     }
 
-    public void setArt(Button art) {
+    public void setArt(RadioButton art) {
         this.art = art;
     }
 
-    public Button getCient() {
+    public RadioButton getCient() {
         return cient;
     }
 
-    public void setCient(Button cient) {
+    public void setCient(RadioButton cient) {
         this.cient = cient;
     }
     

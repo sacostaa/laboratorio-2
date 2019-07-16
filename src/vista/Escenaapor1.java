@@ -182,6 +182,8 @@ public class Escenaapor1 implements Vista {
         layout.getChildren().add(l7);
         this.escena = new Scene (layout,600,600);
     }
+    
+    
 
     @Override
     public Scene getscene() {

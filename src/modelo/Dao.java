@@ -5,10 +5,14 @@
  */
 package modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ASUS
  */
-public class Dao {
+public interface Dao{
+    public void guardarproyecto ();
+     public void leerproyectos();
     
 }

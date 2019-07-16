@@ -5,10 +5,25 @@
  */
 package Controlador;
 
+import modelo.Dao;
+import vista.Escenaapor2;
+import vista.Escenapro2;
+
 /**
  *
  * @author ASUS
  */
 public class Controladorprom2 {
+    private Escenapro2  vista;
+    private Dao modelo;
+    
+     public Escenapro2 getVista() {
+        return vista;
+    }
+
+    public Controladorprom2() {
+        this.vista = new Escenapro2();
+        
+    }
     
 }
