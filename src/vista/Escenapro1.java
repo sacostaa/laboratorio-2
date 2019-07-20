@@ -40,15 +40,21 @@ public class Escenapro1 implements Vista{
     private RadioButton art;
     private RadioButton cient;
     private Label pregunta;
+    private Label advertencianombre;
+    private Label advertencianumero1;
+    private Label advertencianumero2;
             
 
-    public Escenapro1() {
+    public Escenapro1(String advn, String advnum) {
         this.favor = new Label("por favor ingrese los datos pedidos para ingresar un nuevo proyecto");
         this.lnombre = new Label ("nombre");
         this.lapellido = new Label("apellido");
         this.lnombrepro = new Label ("nombre del proyecto");
         this.lcorreo = new Label ("correo electronico");
         this.ltell = new Label("telefono celular");
+        this.advertencianombre = new Label(advn);
+        this.advertencianumero1 = new Label (advnum);
+        this.advertencianumero2 = new Label (advnum);
         this.tnombre = new TextField();
         this.tapellido = new TextField();
         this.tnombrepro = new TextField();
@@ -82,14 +88,18 @@ public class Escenapro1 implements Vista{
         l1.getChildren().add(favor);
         l2.getChildren().add(lnombre);
         l2.getChildren().add(tnombre);
+        
+        
         l3.getChildren().add(lapellido);
         l3.getChildren().add(tapellido);
         l4.getChildren().add(lnombrepro);
         l4.getChildren().add(tnombrepro);
+        l4.getChildren().add(advertencianombre);
         l5.getChildren().add(lcorreo);
         l5.getChildren().add(tcorreo);
         l6.getChildren().add(ltell);
         l6.getChildren().add(ttell);
+        l6.getChildren().add(advertencianumero1);
         l7.getChildren().add(pregunta);
         l7.getChildren().add(cult);
         l7.getChildren().add(cient);
@@ -98,6 +108,7 @@ public class Escenapro1 implements Vista{
         l8.getChildren().add(registrarse);
         l9.getChildren().add(lmontomin);
         l9.getChildren().add(tmontomin);
+        l9.getChildren().add(advertencianumero2);
         layout.getChildren().add(l1);
         
         layout.getChildren().add(l2);

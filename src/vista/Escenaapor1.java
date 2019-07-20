@@ -24,6 +24,7 @@ public class Escenaapor1 implements Vista {
     private Label lnombreent;
     private Label lcorreo;
     private Label ltell;
+    private Label advertencia;
     private TextField tnombre;
     private TextField tapellido;
     private TextField tnombreent;
@@ -137,7 +138,7 @@ public class Escenaapor1 implements Vista {
     
     
 
-    public Escenaapor1() {
+    public Escenaapor1(String sadvertencia) {
         this.favor = new Label("por favor ingrese los datos pedidos para regsitarse");
         this.lnombre = new Label ("nombre");
         this.lapellido = new Label("apellido");
@@ -149,6 +150,7 @@ public class Escenaapor1 implements Vista {
         this.tnombreent = new TextField();
         this.tcorreo = new TextField();
         this.ttell = new TextField();
+        this.advertencia = new Label(sadvertencia);
         this.registrarse = new Button ("registrarse");
         VBox layout = new VBox();
         HBox l1 = new HBox();
@@ -171,6 +173,7 @@ public class Escenaapor1 implements Vista {
         l5.getChildren().add(tcorreo);
         l6.getChildren().add(ltell);
         l6.getChildren().add(ttell);
+        l6.getChildren().add(advertencia);
         l7.getChildren().add(registrarse);
         layout.getChildren().add(l1);
         

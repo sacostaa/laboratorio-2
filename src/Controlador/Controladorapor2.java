@@ -21,7 +21,7 @@ import vista.Escenaapor2;
 public class Controladorapor2 {
     private Escenaapor2  vista;
     private Dao modelo;
-    private int place;
+   static public int place;
     
      public Escenaapor2 getVista() {
         return vista;

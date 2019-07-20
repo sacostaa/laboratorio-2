@@ -45,7 +45,8 @@ public class Escenapro2 implements Vista{
             Label nombre = new Label (Proyectos.get(i).getNombre());
             Label montomin = new Label(Double.toString(Proyectos.get(i).getPreciocamb()));
             Label orientacion = new Label (Proyectos.get(i).getOrientacion());
-            Label estado = new Label (Boolean.toString(Proyectos.get(i).isEstado()));
+           
+            
             
             Label espacio = new Label ("        ");
             Label espacio1 = new Label ("        ");
@@ -57,7 +58,13 @@ public class Escenapro2 implements Vista{
             liena.getChildren().add(espacio1);
             liena.getChildren().add(orientacion);
             liena.getChildren().add(espacio2);
+            if (Proyectos.get(i).isEstado() == true) {
+                Label estado = new Label ("disponible");
+                liena.getChildren().add(estado);
+            }else{
+            Label estado = new Label ("vendido");
             liena.getChildren().add(estado);
+        }
             liena.getChildren().add(espacio3);
             
             

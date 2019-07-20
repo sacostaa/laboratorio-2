@@ -49,7 +49,8 @@ public class Escenaapor2 implements Vista{
             Label nombre = new Label (Proyectos.get(i).getNombre());
             Label montomin = new Label(Double.toString(Proyectos.get(i).getPreciocamb()));
             Label orientacion = new Label (Proyectos.get(i).getOrientacion());
-            Label estado = new Label (Boolean.toString(Proyectos.get(i).isEstado()));
+           
+            
             RadioButton boton = new RadioButton(Proyectos.get(i).getNombre());
             boton.setToggleGroup(grupo);
             Label espacio = new Label ("        ");
@@ -62,7 +63,13 @@ public class Escenaapor2 implements Vista{
             liena.getChildren().add(espacio1);
             liena.getChildren().add(orientacion);
             liena.getChildren().add(espacio2);
-            liena.getChildren().add(estado);
+             if (Proyectos.get(i).isEstado() == true   ){
+                Label estado = new Label ("disponible");
+                liena.getChildren().add(estado);
+            }else{
+                Label estado = new Label ("vendido");
+                liena.getChildren().add(estado);
+            }
             liena.getChildren().add(espacio3);
             liena.getChildren().add(boton);
             botones.add(boton);

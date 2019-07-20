@@ -33,7 +33,7 @@ public class Controladorapor1 {
     
     public Controladorapor1() {
       this.escena = 
-              new Escenaapor1();
+              new Escenaapor1("");
       this.escena.getRegistrarse().setOnAction(new Evento1());
       
     }
@@ -42,6 +42,11 @@ public class Controladorapor1 {
       implements EventHandler<ActionEvent>{
        @Override
         public void handle(ActionEvent event) {
+           
+           
+                
+            
+            try{
             String nombre = escena.getTnombre().getText(); 
             String apellido = escena.getTapellido().getText();
             String nombreent = escena.getTnombreent().getText();
@@ -55,6 +60,23 @@ public class Controladorapor1 {
            stage.setTitle("Escena 2 aportante");
            stage.setScene(escena);
            stage.show();
+            }catch(NumberFormatException ex){
+                  /* Singleton singleton=Singleton.getSingleton();
+           Stage stage = singleton.getStage();
+           Controladorapor1 controlador = new Controladorapor1();
+           controlador.setEscena(new Escenaapor1("solo se pueden ingresar numeros"));
+           Scene escena = controlador.getVista().getscene();
+           stage.setTitle("Escena 2 aportante");
+           stage.setScene(escena);
+           stage.show();
+                
+*/
+                  System.out.println("solo ingrese numeros cuando se le pidan alguno");
+                   }
+            
+           
+                
+            
            }
    
 //          
@@ -63,6 +85,24 @@ public class Controladorapor1 {
     public void agegar(){
         
     }
+
+    public Escenaapor1 getEscena() {
+        return escena;
+    }
+
+    public void setEscena(Escenaapor1 escena) {
+        this.escena = escena;
+    }
+
+    public Dao getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(Dao modelo) {
+        this.modelo = modelo;
+    }
+    
+    
     
 }
     
