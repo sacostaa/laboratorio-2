@@ -47,6 +47,7 @@ public class ArchivoDao implements Dao{
         File p = new File("proyectos.txt");
         File pro = new File("promotores.txt");
         File apor = new File("aportantes.txt");
+        File re = new File ("resulatdos.txt");
         
         if(apor.exists()){
         try{
@@ -134,6 +135,31 @@ public class ArchivoDao implements Dao{
         for (int i = 0; i <Proyectos.size(); i++) {
             System.out.println(Proyectos.get(i).getAportante().getApelldio());
         }
+        if (re.exists()) {
+           try{
+            String datosre[];
+            Scanner result = new Scanner(re);
+            while(result.hasNextLine()){
+                datosre = result.nextLine().split(" ");
+                if (datosre.length==3) {
+                    for (int i = 0; i < Proyectos.size(); i++) {
+                        for (int j = 0; j < aportantes.size(); j++) {
+                            if (Proyectos.get(i).getNombre().equals(datosre[0])) {
+                                if (aportantes.get(j).getCorreo().equals(datosre[2])) {
+                                    Proyectos.get(i).setAportante(aportantes.get(j));
+                                    Proyectos.get(i).setPreciocamb(Double.parseDouble(datosre[1]));
+                                    Proyectos.get(i).setEstado(false);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }catch(FileNotFoundException gg){
+            
+        } 
+        }
+        
     }
 
     @Override

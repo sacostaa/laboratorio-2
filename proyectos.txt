@@ -1,2 +1,3 @@
-pro12 Cientifico 2000 true lolito@gmail.com 
-pro8 Artistico 2000 true lolito@gmail.com 
+pro12 Cientifico 2000.0 true lolito@gmail.com
+pro8 Artistico 2000.0 true lolito@gmail.com
+pro1 artistico 90000.0 true juan.acosta@gmail.com

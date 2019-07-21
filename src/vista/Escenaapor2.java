@@ -71,7 +71,10 @@ public class Escenaapor2 implements Vista{
                 liena.getChildren().add(estado);
             }
             liena.getChildren().add(espacio3);
-            liena.getChildren().add(boton);
+            if (Proyectos.get(i).isEstado()==true) {
+                liena.getChildren().add(boton);
+            }
+            
             botones.add(boton);
             info.add(liena);
             
