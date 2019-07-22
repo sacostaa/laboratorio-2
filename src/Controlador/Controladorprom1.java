@@ -5,9 +5,6 @@
  */
 package Controlador;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintStream;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -96,26 +93,6 @@ public class Controladorprom1 {
            stage.setTitle("Escena 2 promotor");
            stage.setScene(escena);
            stage.show();
-           File pro = new File("promotores.txt");
-           File p = new File ("proyectos.txt");
-           PrintStream salidap = null;
-           PrintStream salidapro = null;
-           try{
-                           salidap = new PrintStream(p);
-                           }catch(IOException e){
-                           System.out.println("esepcion");
-                       }
-           try{
-                           salidapro = new PrintStream(pro);
-                           }catch(IOException e){
-                           System.out.println("esepcion");
-                       }
-                for (int i = 0; i < promotores.size(); i++) {
-                    salidapro.println(promotores.get(i).getNombre()+" "+promotores.get(i).getApelldio()+" "+promotores.get(i).getCorreo()+" "+Integer.toString(promotores.get(i).getNumero()));
-                }
-            for (int i = 0; i < Proyectos.size(); i++) {
-                salidap.println(Proyectos.get(i).getNombre()+" "+Proyectos.get(i).getOrientacion()+" "+Double.toString(Proyectos.get(i).getMontomin())+" "+Boolean.toString(Proyectos.get(i).isEstado())+" "+Proyectos.get(i).getPromotor().getCorreo());
-            }
             }catch(NumberFormatException ex){
                 /*
            Singleton singleton=Singleton.getSingleton();

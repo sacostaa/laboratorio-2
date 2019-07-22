@@ -53,14 +53,19 @@ public class Escena1 implements Vista {
         this.bpro = new Button ("promotor");
         this.bapor = new Button ("aportante");
         VBox layout = new VBox();
-        HBox linea1 = new HBox();
-        HBox linea2 = new HBox();
+        HBox linea1 = new HBox(90);
+        bpro.setMinSize(100, 100);
+        bapor.setMinSize(100, 100);
+        
+       
+        
+        HBox linea2 = new HBox(90);
         linea1.getChildren().add(pregunta);
         linea2.getChildren().add(bpro);
         linea2.getChildren().add(bapor);
         layout.getChildren().add(linea1);
         layout.getChildren().add(linea2);
-        this.escena=new Scene(layout,500,500);
+        this.escena=new Scene(layout,400,200);
         
     }
     

@@ -139,28 +139,29 @@ public class Escenaapor1 implements Vista {
     
 
     public Escenaapor1(String sadvertencia) {
-        this.favor = new Label("por favor ingrese los datos pedidos para regsitarse");
-        this.lnombre = new Label ("nombre");
-        this.lapellido = new Label("apellido");
-        this.lnombreent = new Label ("nombre de la entidad a la que pertenece");
-        this.lcorreo = new Label ("correo electronico");
-        this.ltell = new Label("telefono celular");
+        this.favor = new Label(" POR FAVOR INGRESE LOS DATOS PEDIDOS PARA SU REGISTRO");
+        this.lnombre = new Label (" Nombre");
+        this.lapellido = new Label(" Apellido");
+        this.lnombreent = new Label (" Nombre de la entidad a la que pertenece");
+        this.lcorreo = new Label (" Correo electronico   ");
+        this.ltell = new Label(" Telefono celular");
         this.tnombre = new TextField();
         this.tapellido = new TextField();
         this.tnombreent = new TextField();
         this.tcorreo = new TextField();
         this.ttell = new TextField();
         this.advertencia = new Label(sadvertencia);
-        this.registrarse = new Button ("registrarse");
+        this.registrarse = new Button ("REGISTRARSE");
+        registrarse.setMinSize(100, 100);
         VBox layout = new VBox();
         HBox l1 = new HBox();
-        HBox l2 = new HBox();
-        HBox l3 = new HBox();
-        HBox l4 = new HBox();
-        HBox l5 = new HBox();
-        HBox l6 = new HBox();
-        HBox l7 = new HBox();
-        HBox esp1 = new HBox();
+        HBox l2 = new HBox(175);
+        HBox l3 = new HBox(175);
+        HBox l4 = new HBox(0);
+        HBox l5 = new HBox(110);
+        HBox l6 = new HBox(130);
+        HBox l7 = new HBox(130);
+        HBox esp1 = new HBox(50);
         
         l1.getChildren().add(favor);
         l2.getChildren().add(lnombre);

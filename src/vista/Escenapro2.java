@@ -37,7 +37,7 @@ public class Escenapro2 implements Vista{
     
 
     public Escenapro2() {
-         VBox layout = new VBox();
+         VBox layout = new VBox(50);
          info = new ArrayList <HBox>();
          
         for (int i = 0; i < Proyectos.size(); i++) {

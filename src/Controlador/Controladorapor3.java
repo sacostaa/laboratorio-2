@@ -65,17 +65,7 @@ public class Controladorapor3 {
         public void handle(ActionEvent event) {
             
             File f = new File("resulatdos.txt");
-            File p = new File ("proyectos.txt");
-            File a = new File("aportantes.txt");
             PrintStream salida = null;
-            PrintStream salidap = null;
-            PrintStream salidaa = null;
-            
-            try{
-                           salidaa= new PrintStream(a);
-                           }catch(IOException e){
-                           System.out.println("esepcion");
-                       }
          try{
                            salida = new PrintStream(f);
                            }catch(IOException e){
@@ -88,19 +78,6 @@ public class Controladorapor3 {
                 }else{
                     salida.println(Proyectos.get(i).getNombre()+" "+Proyectos.get(i).getPreciocamb()+" "+Proyectos.get(i).getAportante().getCorreo());
                 }
-            }
-            try{
-                           salidap = new PrintStream(p);
-                           }catch(IOException e){
-                           System.out.println("esepcion");
-                       }
-            
-            for (int i = 0; i < Proyectos.size(); i++) {
-                salidap.println(Proyectos.get(i).getNombre()+" "+Proyectos.get(i).getOrientacion()+" "+Double.toString(Proyectos.get(i).getMontomin())+" "+Boolean.toString(Proyectos.get(i).isEstado())+" "+Proyectos.get(i).getPromotor().getCorreo());
-            }
-            
-            for (int i = 0; i < aportantes.size(); i++) {
-                salidaa.println(aportantes.get(i).getNombre()+" "+aportantes.get(i).getApelldio()+" "+aportantes.get(i).getNombreent()+" "+aportantes.get(i).getCorreo()+" "+Integer.toString(aportantes.get(i).getNumero()));
             }
             
             Singleton singleton=Singleton.getSingleton();

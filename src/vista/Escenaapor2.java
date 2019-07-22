@@ -39,7 +39,7 @@ public class Escenaapor2 implements Vista{
     private ToggleGroup grupo;
 
     public Escenaapor2() {
-        VBox layout = new VBox();
+        VBox layout = new VBox(20);
         info = new ArrayList <HBox>();
          botones = new ArrayList <RadioButton>();
          seguir = new Button ("seguir");
@@ -71,10 +71,7 @@ public class Escenaapor2 implements Vista{
                 liena.getChildren().add(estado);
             }
             liena.getChildren().add(espacio3);
-            if (Proyectos.get(i).isEstado()==true) {
-                liena.getChildren().add(boton);
-            }
-            
+            liena.getChildren().add(boton);
             botones.add(boton);
             info.add(liena);
             

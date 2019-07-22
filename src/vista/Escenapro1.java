@@ -46,12 +46,12 @@ public class Escenapro1 implements Vista{
             
 
     public Escenapro1(String advn, String advnum) {
-        this.favor = new Label("por favor ingrese los datos pedidos para ingresar un nuevo proyecto");
-        this.lnombre = new Label ("nombre");
-        this.lapellido = new Label("apellido");
-        this.lnombrepro = new Label ("nombre del proyecto");
-        this.lcorreo = new Label ("correo electronico");
-        this.ltell = new Label("telefono celular");
+        this.favor = new Label(" POR FAVOR INGRESE LOS DATOS PEDIDOS PARA INGRESAS UN NUEVO PROYECTO");
+        this.lnombre = new Label (" Nombre");
+        this.lapellido = new Label(" Apellido");
+        this.lnombrepro = new Label (" Nombre del proyecto");
+        this.lcorreo = new Label (" Correo electronico");
+        this.ltell = new Label(" Telefono celular");
         this.advertencianombre = new Label(advn);
         this.advertencianumero1 = new Label (advnum);
         this.advertencianumero2 = new Label (advnum);
@@ -60,14 +60,15 @@ public class Escenapro1 implements Vista{
         this.tnombrepro = new TextField();
         this.tcorreo = new TextField();
         this.ttell = new TextField();
-        this.registrarse = new Button ("registrar");
-        this.pregunta = new Label("de que orientacion es el proyecto?");
+        this.registrarse = new Button ("REGISTRAR");
+        registrarse.setMinSize(100, 100);
+        this.pregunta = new Label(" ¿De que orientacion es el proyecto?");
         ToggleGroup grupo = new ToggleGroup();
-        this.empre = new RadioButton ("empresarial");
-        this.art = new RadioButton ("artistica");
-        this.cient = new RadioButton ("cientifica");
-        this.cult = new RadioButton ("cultural");
-        this.lmontomin = new Label("monto minimo");
+        this.empre = new RadioButton (" Empresarial");
+        this.art = new RadioButton (" Artistica");
+        this.cient = new RadioButton (" Cientifica");
+        this.cult = new RadioButton (" Cultural");
+        this.lmontomin = new Label(" Monto minimo");
         this.cult.setToggleGroup(grupo);
         this.art.setToggleGroup(grupo);
         this.cient.setToggleGroup(grupo);
@@ -75,15 +76,15 @@ public class Escenapro1 implements Vista{
         this.empre.setToggleGroup(grupo);
         this.tmontomin = new TextField();
         VBox layout = new VBox();
-        HBox l1 = new HBox();
-        HBox l2 = new HBox();
-        HBox l3 = new HBox();
-        HBox l4 = new HBox();
-        HBox l5 = new HBox();
-        HBox l6 = new HBox();
-        HBox l7 = new HBox();
+        HBox l1 = new HBox(0);
+        HBox l2 = new HBox(70);
+        HBox l3 = new HBox(70);
+        HBox l4 = new HBox(5);
+        HBox l5 = new HBox(20);
+        HBox l6 = new HBox(30);
+        HBox l7 = new HBox(0);
         HBox l8 = new HBox();
-        HBox l9 = new HBox();
+        HBox l9 = new HBox(30);
         
         l1.getChildren().add(favor);
         l2.getChildren().add(lnombre);
